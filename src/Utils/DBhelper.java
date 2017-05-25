@@ -8,8 +8,8 @@ public class DBhelper {
 		 { 
 		     String driver = "com.mysql.jdbc.Driver";
 		     String url = "jdbc:mysql://127.0.0.1:3306/Hotel";
-		     String user = "hotelking";
-		     String password = "hotelking";
+		     String user = "HotelKing";
+		     String password = "123456789A";
 		    try {
 		        Class.forName(driver);
 		        con = DriverManager.getConnection(url,user,password);

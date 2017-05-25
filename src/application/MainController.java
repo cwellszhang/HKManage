@@ -20,12 +20,17 @@ public class MainController implements Initializable{
 	   @FXML private Text txt_department;
 	   @FXML private Text txt_job;
 	   @FXML private Text txt_priority;
+//	   private Main application;
+//	   
+//	   public void setApp(Main application){  
+//	        this.application = application;  
+//	    }  
 	   @Override
 	   public void initialize(URL location, ResourceBundle resources) {
 	       // TODO (don't really need to do anything here)
 
 		   DBhelper connector = new DBhelper(); 
-	       String query= "select * from employee_info where id=1";
+	       String query= "select * from employee_info where id="+LoginPage.id;
 	       ResultSet result = connector.query(query);
 	       try {
 	         while (result.next()) {

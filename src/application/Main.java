@@ -5,10 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 
 
 public class Main extends Application {
+	
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -22,7 +23,13 @@ public class Main extends Application {
 		}
 	}
 	
+	public void userlogin(){  
+	    launch();  
+	 }  
+	
 	public static void main(String[] args) {
-		launch(args);
+		LoginPage loginPage =new LoginPage();
+		
+		//launch();
 	}
 }

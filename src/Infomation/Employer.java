@@ -14,5 +14,6 @@ public class Employer {
      private final SimpleStringProperty entryDate = new SimpleStringProperty(); 
      private final SimpleStringProperty brithday = new SimpleStringProperty(); 
      
+     
 
 }
