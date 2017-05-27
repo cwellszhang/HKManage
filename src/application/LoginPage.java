@@ -75,7 +75,7 @@ public class LoginPage extends JFrame {
          public void actionPerformed(ActionEvent e) { 
         	try{
         	DBhelper cn =new DBhelper();
-      	    ResultSet rs =cn.query("select * from employee_info where id ="+userText.getText());
+      	    ResultSet rs =cn.query("select * from employee_info where account='"+userText.getText()+"'");
       	    Boolean success=false;
       	    if (rs.next())
       	    {
@@ -83,14 +83,17 @@ public class LoginPage extends JFrame {
       	       while(rs.next()){
                 String passwd =  rs.getString("password");
                 if(passwd.equals(passwdText.getText())){
+                	System.out.println("success");
                 	success =true ;
                 }
                }
+      	       
       	       if(success)  
       	    	   {
+      	    	     rs.previous();
       	    	     hintLabel.setText("登陆成功");
-      	    	     id =userText.getText();
-      	    	    // dispose();
+      	    	     id =String.valueOf(rs.getInt("id"));
+      	    	     System.out.println(id);
       	             dispose();
       	             Main applictaions=new Main();
       	             applictaions.userlogin();
