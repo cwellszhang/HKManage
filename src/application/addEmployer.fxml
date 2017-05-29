@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="353.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EmployRegisterController">
+   <children>
+      <Label layoutX="60.0" layoutY="53.0" text="姓名：" />
+      <Label layoutX="61.0" layoutY="84.0" text="性别：" />
+      <Label layoutX="60.0" layoutY="114.0" text="所属部门：" />
+      <Label layoutX="59.0" layoutY="148.0" text="薪资：" />
+      <Label layoutX="59.0" layoutY="177.0" text="账号：" />
+      <Label layoutX="59.0" layoutY="207.0" text="密码：" />
+      <Label layoutX="59.0" layoutY="241.0" text="权限：" />
+      <TextField fx:id="txt_name" layoutX="176.0" layoutY="48.0" prefHeight="17.0" prefWidth="166.0" />
+      <TextField fx:id="txt_sex" layoutX="176.0" layoutY="79.0" prefHeight="17.0" prefWidth="166.0" />
+      <TextField fx:id="txt_department" layoutX="177.0" layoutY="111.0" prefHeight="17.0" prefWidth="166.0" />
+      <Label layoutX="27.0" layoutY="14.0" text="新员工信息注册界面">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_salary" layoutX="177.0" layoutY="142.0" prefHeight="17.0" prefWidth="166.0" />
+      <TextField fx:id="txt_account" layoutX="176.0" layoutY="174.0" prefHeight="17.0" prefWidth="166.0" />
+      <TextField fx:id="txt_password" layoutX="176.0" layoutY="203.0" prefHeight="17.0" prefWidth="166.0" />
+      <TextField fx:id="txt_priority" layoutX="176.0" layoutY="234.0" prefHeight="17.0" prefWidth="166.0" />
+      <Button layoutX="383.0" layoutY="234.0" mnemonicParsing="false" onAction="#on_AddConfirm" text=" 确定" />
+      <Button layoutX="447.0" layoutY="234.0" mnemonicParsing="false" onAction="#on_AddCancel" text=" 取消" />
+   </children>
+</AnchorPane>

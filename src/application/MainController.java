@@ -3,15 +3,24 @@ package application;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import Utils.DBhelper;
 import Infomation.Employer;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class MainController implements Initializable{
 	   @FXML private Text txt_id;
@@ -54,4 +63,70 @@ public class MainController implements Initializable{
 				e.printStackTrace();
 			}
 	   }
+	   public boolean check_priority(){
+		   DBhelper connector = new DBhelper(); 
+	       String query= "select * from employee_info where id="+LoginPage.id;
+	       ResultSet result = connector.query(query);
+	       Integer i ;
+	       i=10;//默认最低权限10
+	       try {
+		         while (result.next()) {
+				      i=Integer.parseInt(result.getString("priority"));
+		          }
+		       }
+				  catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+			}
+		    // 权限大于3，无权查看员工信息
+		    if (i>3){
+		    	  return false;
+		    }else{
+		    	  return true;
+		    }
+		 
+	   }
+	   
+	   public void start_employer(ActionEvent event){
+		   if(check_priority()){
+		   try {
+			    Stage stage = new Stage();
+				Parent root = FXMLLoader.load(getClass()
+						.getResource("/application/Employer.fxml"));
+				Scene scene = new Scene(root);
+			    stage.setTitle("员工管理系统");
+				stage.setScene(scene);
+				stage.show();
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+		   }else{
+			   f_alert_confirmDialog("权限警告","对不起，您无权查看该信息");
+		   }
+		   
+	   }
+	   /**
+	     * 弹出一个通用的确定对话框
+	     * @param p_header 对话框的信息标题
+	     * @param p_message 对话框的信息
+	     * @return 用户点击了是或否
+	     */
+	    public static boolean f_alert_confirmDialog(String p_header,String p_message){
+//	        按钮部分可以使用预设的也可以像这样自己 new 一个
+	        Alert _alert = new Alert(Alert.AlertType.WARNING);
+//	        设置窗口的标题
+//	        _alert.setTitle(p_header);
+	        _alert.setHeaderText(p_header);
+	        _alert.setContentText(p_message);
+//	        设置对话框的 icon 图标，参数是主窗口的 stage
+//	        showAndWait() 将在对话框消失以前不会执行之后的代码
+	        Optional<ButtonType> _buttonType = _alert.showAndWait();
+//	        根据点击结果返回
+	        if(_buttonType.get().getButtonData().equals(ButtonBar.ButtonData.YES)){
+	            return true;
+	        }
+	        else {
+	            return false;
+	        }
+	    }
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EmployController">
+   <children>
+      <TableView fx:id="table" layoutX="127.0" layoutY="63.0" prefHeight="525.0" prefWidth="665.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="52.0" text="id" visible="false" />
+          <TableColumn fx:id="col_name" prefWidth="98.0" text="姓名" />
+            <TableColumn fx:id="col_sex" prefWidth="75.0" text="性别" />
+            <TableColumn fx:id="col_department" prefWidth="75.0" text="部门" />
+            <TableColumn fx:id="col_priority" prefWidth="98.0" text="权限" />
+            <TableColumn fx:id="col_salary" prefWidth="75.0" text="薪资" />
+            <TableColumn fx:id="col_account" prefWidth="75.0" text="账号" />
+            <TableColumn fx:id="col_password" prefWidth="115.0" text="密码" />
+        </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="14.0" prefHeight="47.0" prefWidth="225.0" text="职工信息管理">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_search" layoutX="20.0" layoutY="146.0" mnemonicParsing="false" onAction="#search_info" text="查找员工信息" />
+      <Button fx:id="btn_showall" layoutX="20.0" layoutY="85.0" mnemonicParsing="false" onAction="#showall" text="显示全部" />
+      <Button fx:id="btn_add" layoutX="20.0" layoutY="198.0" mnemonicParsing="false" onAction="#add_info" text="添加员工信息" />
+      <Button fx:id="btn_del" layoutX="20.0" layoutY="253.0" mnemonicParsing="false" onAction="#delete_info" text="删除员工信息" />
+      <AnchorPane prefHeight="47.0" prefWidth="192.0" />
+   </children>
+</AnchorPane>

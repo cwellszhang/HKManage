@@ -36,7 +36,7 @@ public class DBhelper {
 		  try{
 		      statement = con.createStatement(); 
 		      ResultSet rs = statement.executeQuery(sql);
-		      //con.close();
+//		      con.close();
 		      return rs;
 		  }catch(SQLException e) {
 		         e.printStackTrace();  
@@ -46,4 +46,17 @@ public class DBhelper {
 		  ResultSet rstmp = null;
 		  return rstmp;
 		 }
+		 public void execute(String sql)
+		 {
+		  try{
+		      statement = con.createStatement(); 
+		      statement.executeUpdate(sql);
+		      System.out.println("insert success!");
+		      con.close();
+		  }catch(SQLException e) {
+		         e.printStackTrace();  
+		         }catch (Exception e) {
+		         e.printStackTrace();
+		     }
+		 } 
 }
