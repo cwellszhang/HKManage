@@ -46,12 +46,13 @@ public class DBhelper {
 		  ResultSet rstmp = null;
 		  return rstmp;
 		 }
+		 
+		 // insert、delete、update
 		 public void execute(String sql)
 		 {
 		  try{
 		      statement = con.createStatement(); 
 		      statement.executeUpdate(sql);
-		      System.out.println("insert success!");
 		      con.close();
 		  }catch(SQLException e) {
 		         e.printStackTrace();  

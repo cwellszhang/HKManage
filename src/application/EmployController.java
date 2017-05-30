@@ -1,8 +1,11 @@
 package application;
 
 import java.net.URL;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -17,6 +20,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import Infomation.Employer;
@@ -82,7 +86,41 @@ public class EmployController implements Initializable{
 	  }
 		  
 	  public void search_info(ActionEvent event){
-		  
+		  TextInputDialog dialog = new TextInputDialog();
+
+    	  dialog.setTitle("员工管理系统");
+    	  dialog.setHeaderText("查找提示");
+    	  dialog.setContentText("请输入需要查找的员工姓名:");
+    	  String name=null;
+    	  // Traditional way to get the response value.
+    	  Optional<String> result = dialog.showAndWait();
+    	  if (result.isPresent()){
+    		  name = result.get();
+    	      System.out.println("Your name: " + result.get());
+    	  }
+    	  DBhelper connector = new DBhelper(); 
+	      String query= "select * from employee_info where name='"+ name+"'";
+	      ResultSet result_info = connector.query(query);
+	      List.clear();
+	      try {
+		         while (result_info.next()) {
+					System.out.println(result_info.getString("account"));
+					Employer tmp = new Employer();
+					tmp.setId(result_info.getString("id"));
+					tmp.setDepartment(result_info.getString("departmentId"));
+					tmp.setSex(result_info.getInt("sex"));
+					tmp.setUsername(result_info.getString("name"));
+					tmp.setAccount(result_info.getString("account"));
+					tmp.setPassword(result_info.getString("password"));
+					tmp.setPriority(result_info.getInt("priority"));
+					tmp.setSalary(result_info.getString("salary"));
+					List.add(tmp);
+		          }
+		       }
+				  catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 	  }
       public void  add_info(ActionEvent event){
 		   try {
@@ -97,7 +135,24 @@ public class EmployController implements Initializable{
 			}
 	  } 
       public void delete_info(){
-		  
+    	  TextInputDialog dialog = new TextInputDialog();
+
+    	  dialog.setTitle("员工管理系统");
+    	  dialog.setHeaderText("删除提示");
+    	  dialog.setContentText("请输入需要删除的员工姓名:");
+    	  String name=null;
+    	  // Traditional way to get the response value.
+    	  Optional<String> result = dialog.showAndWait();
+    	  if (result.isPresent()){
+    		  name = result.get();
+    	      System.out.println("Your name: " + result.get());
+    	  }
+    	  DBhelper connector = new DBhelper(); 
+	      String delete= "delete from employee_info where name='"+ name+"'";
+	      connector.execute(delete);
+	      showall();
+    	  // The Java 8 way to get the response value (with lambda expression).
+//    	  result.ifPresent(name -> System.out.println("Your name: " + name));
 	  }
 	  
 
