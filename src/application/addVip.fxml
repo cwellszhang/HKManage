@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="360.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VipRegisterController">
+   <children>
+      <Label layoutX="30.0" layoutY="26.0" text="添加会员信息">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="74.0" text="姓名：" />
+      <Label layoutX="76.0" layoutY="112.0" text="性别：" />
+      <Label layoutX="76.0" layoutY="147.0" text="联系电话：" />
+      <Label layoutX="76.0" layoutY="182.0" text="联系地址：" />
+      <Label layoutX="75.0" layoutY="215.0" text="会员等级：" />
+      <Label layoutX="75.0" layoutY="249.0" text="注册时间：" />
+      <TextField fx:id="txt_name" layoutX="141.0" layoutY="69.0" />
+      <TextField fx:id="txt_sex" layoutX="141.0" layoutY="107.0" />
+      <TextField fx:id="txt_phone" layoutX="141.0" layoutY="142.0" />
+      <TextField fx:id="txt_address" layoutX="141.0" layoutY="177.0" />
+      <TextField fx:id="txt_degree" layoutX="141.0" layoutY="210.0" />
+      <DatePicker fx:id="txt_time" layoutX="140.0" layoutY="244.0" />
+      <Button layoutX="141.0" layoutY="298.0" mnemonicParsing="false" onAction="#on_AddConfirm" text="确认" />
+      <Button layoutX="215.0" layoutY="298.0" mnemonicParsing="false" onAction="#on_AddCancel" text="取消" />
+   </children>
+</AnchorPane>

@@ -40,7 +40,7 @@ public class EmployController implements Initializable{
 	   @FXML private TableColumn<Employer,String> col_account;
 	   @FXML private TableColumn<Employer,String> col_password;
 	   
-	   private final ObservableList<Employer> List = FXCollections.observableArrayList(); 
+	   private static final ObservableList<Employer> List = FXCollections.observableArrayList(); 
 	
 	  public static Stage stage_add = new Stage();
 	  @Override
@@ -59,6 +59,31 @@ public class EmployController implements Initializable{
 		   table.setItems(List);
 	       showall();
 	   }
+	  public static void refresh(){
+		   List.clear();
+		   DBhelper connector = new DBhelper(); 
+	       String query= "select * from employee_info";
+	       ResultSet result = connector.query(query);
+	       try {
+	         while (result.next()) {
+				System.out.println(result.getString("account"));
+				Employer tmp = new Employer();
+				tmp.setId(result.getString("id"));
+				tmp.setDepartment(result.getString("departmentId"));
+				tmp.setSex(result.getInt("sex"));
+				tmp.setUsername(result.getString("name"));
+				tmp.setAccount(result.getString("account"));
+				tmp.setPassword(result.getString("password"));
+				tmp.setPriority(result.getInt("priority"));
+				tmp.setSalary(result.getString("salary"));
+				List.add(tmp);
+	          }
+	       }
+			  catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	  }
 	  public void showall(){
 		   List.clear();
 		   DBhelper connector = new DBhelper(); 

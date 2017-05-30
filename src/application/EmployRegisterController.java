@@ -43,6 +43,7 @@ public class EmployRegisterController implements Initializable{
           		+ " values ('"+name+"',"+department+",'"+sex+"',"+salary+",'"+account+"','"+password+"',"+priority+")";
           connector.execute(insert);
           EmployController.stage_add.close();
+          EmployController.refresh();
    	      }else{
    	    	  
    	      }

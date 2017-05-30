@@ -109,6 +109,7 @@
                </children>
             </AnchorPane>
             <Button fx:id="btn_employer" layoutX="249.0" layoutY="343.0" mnemonicParsing="false" onAction="#start_employer" opacity="0.0" prefHeight="115.0" prefWidth="126.0" text="Button" />
+            <Button fx:id="btn_vip" layoutX="448.0" layoutY="354.0" mnemonicParsing="false" onAction="#start_vip" opacity="0.0" prefHeight="101.0" prefWidth="126.0" text="Button" />
          </children>
       </AnchorPane>
       <ImageView fitHeight="70.0" fitWidth="783.0">
