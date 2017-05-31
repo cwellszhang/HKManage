@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="616.0" prefWidth="611.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Label layoutX="33.0" layoutY="35.0" text="餐饮管理系统">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_search" layoutX="33.0" layoutY="138.0" mnemonicParsing="false" onAction="#search_info" text="预订信息" />
+      <Button fx:id="btn_showall" layoutX="33.0" layoutY="93.0" mnemonicParsing="false" onAction="#showall" text="显示全部" />
+      <Button fx:id="btn_search1" layoutX="33.0" layoutY="269.0" mnemonicParsing="false" onAction="#search_info" text="查找餐桌" />
+      <Button fx:id="btn_add" layoutX="33.0" layoutY="181.0" mnemonicParsing="false" onAction="#add_info" text="添加预定" />
+      <Button fx:id="btn_delete" layoutX="33.0" layoutY="225.0" mnemonicParsing="false" onAction="#del_info" text="删除预定" />
+      <Button fx:id="btn_add1" layoutX="33.0" layoutY="308.0" mnemonicParsing="false" onAction="#add_info" text="添加餐桌" />
+      <Button fx:id="btn_add11" layoutX="33.0" layoutY="385.0" mnemonicParsing="false" onAction="#add_info" text="点菜信息" />
+      <Button fx:id="btn_add12" layoutX="33.0" layoutY="346.0" mnemonicParsing="false" onAction="#add_info" text="删除餐桌" />
+      <Button fx:id="btn_add111" layoutX="33.0" layoutY="470.0" mnemonicParsing="false" onAction="#add_info" text="自助餐用餐信息" />
+      <Button fx:id="btn_add112" layoutX="33.0" layoutY="427.0" mnemonicParsing="false" onAction="#add_info" text="自助餐菜品" />
+   </children>
+</AnchorPane>
