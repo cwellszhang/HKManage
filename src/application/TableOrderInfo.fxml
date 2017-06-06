@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Label layoutX="43.0" layoutY="45.0" text="点菜信息">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="268.0" layoutY="44.0" text="桌号：">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField layoutX="370.0" layoutY="45.0" />
+      <TableView layoutY="113.0" prefHeight="488.0" prefWidth="800.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="编号" />
+          <TableColumn prefWidth="75.0" text="菜品编号" />
+            <TableColumn prefWidth="75.0" text="名称" />
+            <TableColumn prefWidth="75.0" text="类型" />
+            <TableColumn prefWidth="75.0" text="数量" />
+            <TableColumn prefWidth="75.0" text="单价" />
+            <TableColumn prefWidth="75.0" text="总价" />
+            <TableColumn prefWidth="75.0" text="状态" />
+            <TableColumn prefWidth="199.0" text="食材" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
