@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="33.0" layoutY="35.0" text="餐饮管理系统">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_search" layoutX="33.0" layoutY="97.0" mnemonicParsing="false" onAction="#search_info" text="预订信息" />
+      <Button fx:id="btn_search1" layoutX="33.0" layoutY="220.0" mnemonicParsing="false" onAction="#search_info" text="查找餐桌" />
+      <Button fx:id="btn_add" layoutX="33.0" layoutY="138.0" mnemonicParsing="false" onAction="#add_info" text="添加预定" />
+      <Button fx:id="btn_delete" layoutX="33.0" layoutY="180.0" mnemonicParsing="false" onAction="#del_info" text="删除预定" />
+      <Button fx:id="btn_add1" layoutX="33.0" layoutY="264.0" mnemonicParsing="false" onAction="#add_info" text="添加餐桌" />
+      <Button fx:id="btn_add11" layoutX="33.0" layoutY="350.0" mnemonicParsing="false" onAction="#add_info" text="点菜信息" />
+      <Button fx:id="btn_add12" layoutX="33.0" layoutY="308.0" mnemonicParsing="false" onAction="#add_info" text="删除餐桌" />
+      <Button fx:id="btn_add111" layoutX="33.0" layoutY="438.0" mnemonicParsing="false" onAction="#add_info" text="自助餐用餐信息" />
+      <Button fx:id="btn_add112" layoutX="33.0" layoutY="392.0" mnemonicParsing="false" onAction="#add_info" text="自助餐菜品" />
+      <TableView fx:id="table" layoutX="154.0" layoutY="96.0" prefHeight="452.0" prefWidth="603.0">
+         <columns>
+            <TableColumn fx:id="col_id" prefWidth="52.0" text="id" visible="false" />
+            <TableColumn fx:id="col_name" prefWidth="76.0" text="桌号" />
+            <TableColumn fx:id="col_sex" prefWidth="75.0" text="类型" />
+            <TableColumn fx:id="col_department" prefWidth="81.0" text="状态" />
+            <TableColumn fx:id="col_priority" prefWidth="99.0" text="客户" />
+            <TableColumn fx:id="col_salary" prefWidth="99.0" text="菜品" />
+            <TableColumn fx:id="col_account" prefWidth="98.0" text="服务员" />
+            <TableColumn fx:id="col_password" prefWidth="86.0" text="时间" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
