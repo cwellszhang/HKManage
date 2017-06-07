@@ -161,6 +161,25 @@ public class MainController implements Initializable{
 		   }
 		   
 	   }
+	   
+	   public void start_room(ActionEvent event){
+		   if(check_priority()){
+		   try {
+			    Stage stage = new Stage();
+				Parent root = FXMLLoader.load(getClass()
+						.getResource("/application/Room.fxml"));
+				Scene scene = new Scene(root);
+			    stage.setTitle("客房管理系统");
+				stage.setScene(scene);
+				stage.show();
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+		   }else{
+			   f_alert_confirmDialog("权限警告","对不起，您无权查看该信息");
+		   }
+		   
+	   }
 	   /**
 	     * 弹出一个通用的确定对话框
 	     * @param p_header 对话框的信息标题

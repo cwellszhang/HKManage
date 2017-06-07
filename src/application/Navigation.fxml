@@ -112,6 +112,7 @@
             <Button fx:id="btn_vip" layoutX="448.0" layoutY="354.0" mnemonicParsing="false" onAction="#start_vip" opacity="0.0" prefHeight="101.0" prefWidth="126.0" text="vip管理btn" />
             <Button fx:id="btn_entertainment" layoutX="444.0" layoutY="16.0" mnemonicParsing="false" onAction="#start_entertainment" opacity="0.0" prefHeight="142.0" prefWidth="126.0" text="娱乐设施btn" />
             <Button fx:id="btn_park" layoutX="25.0" layoutY="189.0" mnemonicParsing="false" onAction="#start_park" opacity="0.0" prefHeight="135.0" prefWidth="126.0" text="停车管理btn" />
+            <Button fx:id="btn_room" layoutX="245.0" layoutY="27.0" mnemonicParsing="false" onAction="#start_room" opacity="0.0" prefHeight="135.0" prefWidth="126.0" text="客房管理btn" />
          </children>
       </AnchorPane>
       <ImageView fitHeight="70.0" fitWidth="783.0">

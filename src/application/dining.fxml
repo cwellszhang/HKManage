@@ -14,23 +14,18 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Button fx:id="btn_search" layoutX="33.0" layoutY="97.0" mnemonicParsing="false" onAction="#search_info" text="预订信息" />
-      <Button fx:id="btn_search1" layoutX="33.0" layoutY="220.0" mnemonicParsing="false" onAction="#search_info" text="查找餐桌" />
-      <Button fx:id="btn_add" layoutX="33.0" layoutY="138.0" mnemonicParsing="false" onAction="#add_info" text="添加预定" />
-      <Button fx:id="btn_delete" layoutX="33.0" layoutY="180.0" mnemonicParsing="false" onAction="#del_info" text="删除预定" />
-      <Button fx:id="btn_add1" layoutX="33.0" layoutY="264.0" mnemonicParsing="false" onAction="#add_info" text="添加餐桌" />
-      <Button fx:id="btn_add11" layoutX="33.0" layoutY="350.0" mnemonicParsing="false" onAction="#add_info" text="点菜信息" />
-      <Button fx:id="btn_add12" layoutX="33.0" layoutY="308.0" mnemonicParsing="false" onAction="#add_info" text="删除餐桌" />
+      <Button fx:id="btn_reserve" layoutX="33.0" layoutY="97.0" mnemonicParsing="false" onAction="#search_info" text="预订信息" />
+      <Button fx:id="btn_search" layoutX="33.0" layoutY="137.0" mnemonicParsing="false" onAction="#search_info" text="查找餐桌" />
+      <Button fx:id="btn_add_table" layoutX="33.0" layoutY="181.0" mnemonicParsing="false" onAction="#add_info" text="添加餐桌" />
+      <Button fx:id="btn_add_dish" layoutX="33.0" layoutY="267.0" mnemonicParsing="false" onAction="#add_info" text="点菜信息" />
+      <Button fx:id="btn_delete" layoutX="33.0" layoutY="225.0" mnemonicParsing="false" onAction="#add_info" text="删除餐桌" />
       <TableView fx:id="table" layoutX="154.0" layoutY="96.0" prefHeight="452.0" prefWidth="603.0">
          <columns>
-            <TableColumn fx:id="col_id" prefWidth="52.0" text="id" visible="false" />
-            <TableColumn fx:id="col_name" prefWidth="76.0" text="桌号" />
-            <TableColumn fx:id="col_sex" prefWidth="75.0" text="类型" />
-            <TableColumn fx:id="col_department" prefWidth="81.0" text="状态" />
-            <TableColumn fx:id="col_priority" prefWidth="99.0" text="客户信息" />
-            <TableColumn fx:id="col_salary" prefWidth="99.0" text="价格" />
-            <TableColumn fx:id="col_account" prefWidth="98.0" text="服务员" />
-            <TableColumn fx:id="col_password" prefWidth="86.0" text="时间" />
+            <TableColumn fx:id="col_id" prefWidth="76.0" text="桌号" />
+            <TableColumn fx:id="col_type" prefWidth="75.0" text="类型" />
+            <TableColumn fx:id="col_status" prefWidth="81.0" text="状态" />
+            <TableColumn fx:id="col_orderId" prefWidth="99.0" text="预定信息" />
+            <TableColumn fx:id="col_dishId" prefWidth="271.0" text="菜品信息" />
          </columns>
       </TableView>
    </children>

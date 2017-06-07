@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="289.0" prefWidth="544.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane prefHeight="289.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="292.0" prefWidth="544.0">
          <children>
@@ -18,14 +17,17 @@
             </Label>
             <Button layoutX="460.0" layoutY="222.0" mnemonicParsing="false" onAction="#on_AddCancel" text=" 取消" />
             <Button layoutX="390.0" layoutY="222.0" mnemonicParsing="false" onAction="#on_AddConfirm" text=" 确定" />
-            <TextField fx:id="txt_priority" layoutX="186.0" layoutY="185.0" prefHeight="17.0" prefWidth="166.0" />
-            <TextField fx:id="txt_sex" layoutX="186.0" layoutY="98.0" prefHeight="17.0" prefWidth="166.0" />
-            <TextField fx:id="txt_name" layoutX="186.0" layoutY="58.0" prefHeight="17.0" prefWidth="166.0" />
-            <Label layoutX="70.0" layoutY="190.0" text="处理人：" />
-            <Label layoutX="70.0" layoutY="103.0" text="类型：" />
+
             <Label layoutX="70.0" layoutY="63.0" text="桌号：" />
+            <Label layoutX="70.0" layoutY="103.0" text="类型：" />
             <Label layoutX="70.0" layoutY="147.0" text="状态：" />
-            <TextField fx:id="txt_priority1" layoutX="186.0" layoutY="142.0" prefHeight="17.0" prefWidth="166.0" />
+            <Label layoutX="70.0" layoutY="190.0" text="预定编号：" />
+            
+            <TextField fx:id="txt_id" layoutX="186.0" layoutY="58.0" prefHeight="17.0" prefWidth="166.0" />
+            <TextField fx:id="txt_type" layoutX="186.0" layoutY="98.0" prefHeight="17.0" prefWidth="166.0" />
+            <TextField fx:id="txt_status" layoutX="186.0" layoutY="142.0" prefHeight="17.0" prefWidth="166.0" />
+            <TextField fx:id="txt_orderId" layoutX="186.0" layoutY="185.0" prefHeight="17.0" prefWidth="166.0" />
+
          </children>
       </AnchorPane>
    </children>

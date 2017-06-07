@@ -50,7 +50,7 @@ public class LoginPage extends JFrame {
         userText=new JTextField();
         passwdText=new JPasswordField();
         hintLabel=new  JLabel("");
-        JButton  loginButton=new JButton("登陆");
+        JButton  loginButton=new JButton("登录");
         loginButton.addActionListener(new userLogin());
         loginButton.setBounds(590,92,50,30);
         userText.setBounds(520,20,100,40);

@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="43.0" layoutY="45.0" text="点菜信息">
          <font>
@@ -22,7 +21,7 @@
       <TextField layoutX="370.0" layoutY="45.0" />
       <TableView layoutY="113.0" prefHeight="488.0" prefWidth="800.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="编号" />
+          <TableColumn prefWidth="75.0" text="桌号" />
           <TableColumn prefWidth="75.0" text="菜品编号" />
             <TableColumn prefWidth="75.0" text="名称" />
             <TableColumn prefWidth="75.0" text="类型" />
