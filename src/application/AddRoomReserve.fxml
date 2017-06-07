@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="321.0" prefWidth="567.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="37.0" layoutY="24.0" text="餐桌预定界面">
+      <Label layoutX="37.0" layoutY="24.0" text="客房预定界面">
          <font>
             <Font size="17.0" />
          </font>
@@ -25,9 +25,9 @@
       <Label layoutX="70.0" layoutY="259.0" text="处理人：" />
       <Label layoutX="69.0" layoutY="227.0" text="时间：" />
       <Label layoutX="69.0" layoutY="158.0" text="联系方式：" />
-      <Label layoutX="70.0" layoutY="194.0" text="菜品：" />
+      <Label layoutX="70.0" layoutY="194.0" text="服务：" />
       <Label layoutX="70.0" layoutY="124.0" text="客户姓名：" />
       <Label layoutX="71.0" layoutY="94.0" text="类型：" />
-      <Label layoutX="70.0" layoutY="63.0" text="桌号：" />
+      <Label layoutX="70.0" layoutY="63.0" text="房间号：" />
    </children>
 </AnchorPane>
