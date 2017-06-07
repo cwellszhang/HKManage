@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddEntertainmentController">
+   <children>
+      <AnchorPane prefHeight="277.0" prefWidth="384.0">
+         <children>
+            <Label layoutX="60.0" layoutY="53.0" text="类型：" />
+            <Label layoutX="61.0" layoutY="84.0" text="客户姓名：" />
+            <Label layoutX="60.0" layoutY="114.0" text="客户手机号：" />
+            <Label layoutX="59.0" layoutY="148.0" text="开始时间：" />
+            <Label layoutX="59.0" layoutY="177.0" text="结束时间：" />
+            <TextField fx:id="txt_name" layoutX="176.0" layoutY="79.0" prefHeight="17.0" prefWidth="166.0" />
+            <TextField fx:id="txt_phone" layoutX="177.0" layoutY="111.0" prefHeight="17.0" prefWidth="166.0" />
+            <Label layoutX="27.0" layoutY="14.0" text="娱乐新订单预定">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_startTime" layoutX="177.0" layoutY="142.0" prefHeight="17.0" prefWidth="166.0" />
+            <TextField fx:id="txt_endTime" layoutX="176.0" layoutY="174.0" prefHeight="17.0" prefWidth="166.0" />
+            <Button fx:id="btn_confirm" layoutX="102.0" layoutY="221.0" mnemonicParsing="false" onAction="#on_AddConfirm" text=" 确定" />
+            <Button fx:id="btn_cancel" layoutX="231.0" layoutY="221.0" mnemonicParsing="false" onAction="#on_AddCancel" text=" 取消" />
+            <ChoiceBox fx:id="txt_type" layoutX="176.0" layoutY="48.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

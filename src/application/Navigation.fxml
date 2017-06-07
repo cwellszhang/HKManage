@@ -108,8 +108,10 @@
                   <Text layoutX="195.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="版本号:1" />
                </children>
             </AnchorPane>
-            <Button fx:id="btn_employer" layoutX="249.0" layoutY="343.0" mnemonicParsing="false" onAction="#start_employer" opacity="0.0" prefHeight="115.0" prefWidth="126.0" text="Button" />
-            <Button fx:id="btn_vip" layoutX="448.0" layoutY="354.0" mnemonicParsing="false" onAction="#start_vip" opacity="0.0" prefHeight="101.0" prefWidth="126.0" text="Button" />
+            <Button fx:id="btn_employer" layoutX="249.0" layoutY="343.0" mnemonicParsing="false" onAction="#start_employer" opacity="0.0" prefHeight="115.0" prefWidth="126.0" text="员工管理btn" />
+            <Button fx:id="btn_vip" layoutX="448.0" layoutY="354.0" mnemonicParsing="false" onAction="#start_vip" opacity="0.0" prefHeight="101.0" prefWidth="126.0" text="vip管理btn" />
+            <Button fx:id="btn_entertainment" layoutX="444.0" layoutY="16.0" mnemonicParsing="false" onAction="#start_entertainment" opacity="0.0" prefHeight="142.0" prefWidth="126.0" text="娱乐设施btn" />
+            <Button fx:id="btn_park" layoutX="25.0" layoutY="189.0" mnemonicParsing="false" onAction="#start_park" opacity="0.0" prefHeight="135.0" prefWidth="126.0" text="停车管理btn" />
          </children>
       </AnchorPane>
       <ImageView fitHeight="70.0" fitWidth="783.0">

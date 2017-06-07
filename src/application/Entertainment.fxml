@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="611.0" prefWidth="961.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EntertainmentController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="601.0" prefWidth="1030.0">
+         <children>
+            <Label layoutX="25.0" layoutY="14.0" prefHeight="47.0" prefWidth="225.0" text="娱乐订单管理">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_add" layoutX="11.0" layoutY="259.0" mnemonicParsing="false" onAction="#add_order" text="添加订单" />
+            <Button fx:id="btn_gymshow" layoutX="11.0" layoutY="207.0" mnemonicParsing="false" onAction="#showgym" text="显示健身房订单" />
+            <Button fx:id="btn_showall" layoutX="11.0" layoutY="108.0" mnemonicParsing="false" onAction="#showall" text="显示全部" />
+            <Button fx:id="btn_ktvshow" layoutX="11.0" layoutY="161.0" mnemonicParsing="false" onAction="#showktv" text="显示ktv订单" />
+            <Button fx:id="btn_delete" layoutX="11.0" layoutY="305.0" mnemonicParsing="false" onAction="#delete_order" text="删除订单" />
+            <Button fx:id="btn_search" layoutX="11.0" layoutY="349.0" mnemonicParsing="false" onAction="#search_order" text="查找订单" />
+            <TableView fx:id="table" layoutX="137.0" layoutY="73.0" prefHeight="525.0" prefWidth="866.0">
+               <columns>
+                  <TableColumn fx:id="col_id" prefWidth="77.0" text="订单ID" />
+                  <TableColumn fx:id="col_type" prefWidth="96.0" text="娱乐类型" />
+                  <TableColumn fx:id="col_clientName" minWidth="0.0" prefWidth="77.0" text="客户姓名" />
+                  <TableColumn fx:id="col_clientPhone" minWidth="4.0" prefWidth="82.0" text="客户手机号" />
+                  <TableColumn fx:id="col_startTime" prefWidth="165.0" text="起始时间" />
+                  <TableColumn fx:id="col_endTime" prefWidth="165.0" text="结束时间" />
+                  <TableColumn fx:id="col_price" prefWidth="75.0" text="费用" />
+                  <TableColumn fx:id="col_status" prefWidth="75.0" text="状态" />
+                  <TableColumn fx:id="col_opt" prefWidth="75.0" text="操作" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
