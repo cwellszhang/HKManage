@@ -7,18 +7,19 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DiningController">
    <children>
       <Label layoutX="33.0" layoutY="35.0" text="餐饮管理系统">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Button fx:id="btn_reserve" layoutX="33.0" layoutY="97.0" mnemonicParsing="false" onAction="#search_info" text="预订信息" />
-      <Button fx:id="btn_search" layoutX="33.0" layoutY="137.0" mnemonicParsing="false" onAction="#search_info" text="查找餐桌" />
-      <Button fx:id="btn_add_table" layoutX="33.0" layoutY="181.0" mnemonicParsing="false" onAction="#add_info" text="添加餐桌" />
-      <Button fx:id="btn_add_dish" layoutX="33.0" layoutY="267.0" mnemonicParsing="false" onAction="#add_info" text="点菜信息" />
-      <Button fx:id="btn_delete" layoutX="33.0" layoutY="225.0" mnemonicParsing="false" onAction="#add_info" text="删除餐桌" />
+      <Button fx:id="btn_showall" layoutX="33.0" layoutY="96.0" mnemonicParsing="false" onAction="#showall" text="显示全部" />
+      <Button fx:id="btn_reserve" layoutX="33.0" layoutY="138.0" mnemonicParsing="false" onAction="#reserve_info" text="预订信息" />
+      <Button fx:id="btn_search" layoutX="33.0" layoutY="178.0" mnemonicParsing="false" onAction="#search_info" text="查找餐桌" />
+      <Button fx:id="btn_add_table" layoutX="33.0" layoutY="222.0" mnemonicParsing="false" onAction="#add_info" text="添加餐桌" />
+      <Button fx:id="btn_add_dish" layoutX="33.0" layoutY="308.0" mnemonicParsing="false" onAction="#add_dish" text="点菜信息" />
+      <Button fx:id="btn_delete" layoutX="33.0" layoutY="266.0" mnemonicParsing="false" onAction="#del_info" text="删除餐桌" />
       <TableView fx:id="table" layoutX="154.0" layoutY="96.0" prefHeight="452.0" prefWidth="603.0">
          <columns>
             <TableColumn fx:id="col_id" prefWidth="76.0" text="桌号" />

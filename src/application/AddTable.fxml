@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="289.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="289.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddTableController">
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="292.0" prefWidth="544.0">
          <children>
@@ -15,8 +15,8 @@
                   <Font size="17.0" />
                </font>
             </Label>
-            <Button layoutX="460.0" layoutY="222.0" mnemonicParsing="false" onAction="#on_AddCancel" text=" 取消" />
             <Button layoutX="390.0" layoutY="222.0" mnemonicParsing="false" onAction="#on_AddConfirm" text=" 确定" />
+            <Button layoutX="460.0" layoutY="222.0" mnemonicParsing="false" onAction="#on_AddCancel" text=" 取消" />
 
             <Label layoutX="70.0" layoutY="63.0" text="桌号：" />
             <Label layoutX="70.0" layoutY="103.0" text="类型：" />

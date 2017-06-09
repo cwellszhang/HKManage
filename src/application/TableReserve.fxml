@@ -6,35 +6,31 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TableReserveController">
    <children>
       <Label layoutX="43.0" layoutY="45.0" text="餐桌预定信息">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="268.0" layoutY="44.0" text="桌号：">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Label>
-      <TextField layoutX="370.0" layoutY="45.0" />
-      <TableView layoutY="113.0" prefHeight="488.0" prefWidth="800.0">
+      <TableView fx:id="table" layoutY="113.0" prefHeight="488.0" prefWidth="800.0">
          <columns>
-            <TableColumn prefWidth="51.0" text="编号" />
-            <TableColumn prefWidth="54.0" text="桌号" />
-            <TableColumn prefWidth="63.0" text="客户" />
-            <TableColumn prefWidth="106.0" text="联系方式" />
-            <TableColumn prefWidth="61.0" text="人数" />
-            <TableColumn prefWidth="97.0" text="菜品" />
-            <TableColumn prefWidth="65.0" text="价格" />
-            <TableColumn prefWidth="68.0" text="类型" />
-            <TableColumn prefWidth="60.0" text="状态" />
-            <TableColumn prefWidth="75.0" text="服务员" />
-            <TableColumn prefWidth="99.0" text="时间" />
+            <TableColumn fx:id="col_id" prefWidth="51.0" text="编号" />
+            <TableColumn fx:id="col_TableId" prefWidth="54.0" text="桌号" />
+            <TableColumn fx:id="col_clientName" prefWidth="63.0" text="客户" />
+            <TableColumn fx:id="col_clientPhone" prefWidth="106.0" text="联系方式" />
+            <TableColumn fx:id="col_clientNumber" prefWidth="61.0" text="人数" />
+            <TableColumn fx:id="col_dishId" prefWidth="97.0" text="菜品" />
+            <TableColumn fx:id="col_price" prefWidth="65.0" text="价格" />
+            <TableColumn fx:id="col_type" prefWidth="68.0" text="类型" />
+            <TableColumn fx:id="col_status" prefWidth="60.0" text="状态" />
+            <TableColumn fx:id="col_waiterName" prefWidth="75.0" text="服务员" />
+            <TableColumn fx:id="col_startTime" prefWidth="99.0" text="时间" />
          </columns>
       </TableView>
-      <Button fx:id="btn_add" layoutX="593.0" layoutY="45.0" mnemonicParsing="false" onAction="#add_info" text="添加预定" />
-      <Button fx:id="btn_delete" layoutX="695.0" layoutY="45.0" mnemonicParsing="false" onAction="#del_info" text="删除预定" />
+      <Button fx:id="btn_add" layoutX="598.0" layoutY="45.0" mnemonicParsing="false" onAction="#add_info" text="添加预定" />
+      <Button fx:id="btn_delete" layoutX="682.0" layoutY="45.0" mnemonicParsing="false" onAction="#del_info" text="删除预定" />
+      <Button fx:id="btn_search" layoutX="538.0" layoutY="45.0" mnemonicParsing="false" onAction="#search_info" text="搜索" />
+      <Button fx:id="btn_showall" layoutX="455.0" layoutY="45.0" mnemonicParsing="false" onAction="#showall" text="显示全部" />
    </children>
 </AnchorPane>

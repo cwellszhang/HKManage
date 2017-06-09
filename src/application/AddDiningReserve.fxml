@@ -6,32 +6,34 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="411.0" prefWidth="567.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="411.0" prefWidth="567.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddDiningReserveController">
    <children>
       <Label layoutX="37.0" layoutY="24.0" text="餐桌预定界面">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <Button layoutX="458.0" layoutY="334.0" mnemonicParsing="false" onAction="#on_AddCancel" text=" 取消" />
       <Button layoutX="394.0" layoutY="335.0" mnemonicParsing="false" onAction="#on_AddConfirm" text=" 确定" />   
+      <Button layoutX="458.0" layoutY="334.0" mnemonicParsing="false" onAction="#on_AddCancel" text=" 取消" />
       
       <Label layoutX="70.0" layoutY="63.0" text="桌号：" />
       <Label layoutX="70.0" layoutY="94.0" text="客户姓名：" />
       <Label layoutX="70.0" layoutY="125.0" text="联系方式：" />
-      <Label layoutX="70.0" layoutY="158.0" text="人数：" />
-      <Label layoutX="70.0" layoutY="194.0" text="菜品：" />
-      <Label layoutX="70.0" layoutY="227.0" text="价格：" />
-      <Label layoutX="70.0" layoutY="261.0" text="服务员：" />
-      <Label layoutX="70.0" layoutY="296.0" text="时间：" />
+      <Label layoutX="70.0" layoutY="158.0" text="人数：" />      
+      <Label layoutX="70.0" layoutY="192.0" text="类型：" />
+      <Label layoutX="70.0" layoutY="229.0" text="菜品：" />
+      <Label layoutX="70.0" layoutY="262.0" text="价格：" />
+      <Label layoutX="70.0" layoutY="296.0" text="服务员：" />
+      <Label layoutX="70.0" layoutY="331.0" text="时间：" />
 
-      <TextField fx:id="txt_id" layoutX="187.0" layoutY="58.0" prefHeight="17.0" prefWidth="166.0" />
+      <TextField fx:id="txt_tableId" layoutX="187.0" layoutY="58.0" prefHeight="17.0" prefWidth="166.0" />
       <TextField fx:id="txt_clientName" layoutX="187.0" layoutY="89.0" prefHeight="17.0" prefWidth="166.0" />
       <TextField fx:id="txt_clientPhone" layoutX="187.0" layoutY="121.0" prefHeight="17.0" prefWidth="166.0" />
       <TextField fx:id="txt_clientNumber" layoutX="187.0" layoutY="153.0" prefHeight="17.0" prefWidth="166.0" />
-      <TextField fx:id="txt_dishId" layoutX="187.0" layoutY="189.0" prefHeight="17.0" prefWidth="166.0" />
-      <TextField fx:id="txt_price" layoutX="187.0" layoutY="223.0" prefHeight="17.0" prefWidth="166.0" />
-      <TextField fx:id="txt_waiterName" layoutX="187.0" layoutY="256.0" prefHeight="17.0" prefWidth="166.0" />
-      <TextField fx:id="txt_startTime" layoutX="187.0" layoutY="293.0" prefHeight="17.0" prefWidth="166.0" />
+      <TextField fx:id="txt_type" layoutX="187.0" layoutY="187.0" prefHeight="17.0" prefWidth="166.0" />
+      <TextField fx:id="txt_dishId" layoutX="187.0" layoutY="224.0" prefHeight="17.0" prefWidth="166.0" />
+      <TextField fx:id="txt_price" layoutX="187.0" layoutY="258.0" prefHeight="17.0" prefWidth="166.0" />
+      <TextField fx:id="txt_waiterName" layoutX="187.0" layoutY="291.0" prefHeight="17.0" prefWidth="166.0" />
+      <TextField fx:id="txt_startTime" layoutX="187.0" layoutY="328.0" prefHeight="17.0" prefWidth="166.0" />
    </children>
 </AnchorPane>

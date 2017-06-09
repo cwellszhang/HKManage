@@ -6,20 +6,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DishReserveController">
    <children>
       <Label layoutX="43.0" layoutY="45.0" text="点菜信息">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="268.0" layoutY="44.0" text="桌号：">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Label>
-      <TextField layoutX="370.0" layoutY="45.0" />
-      <TableView layoutY="113.0" prefHeight="488.0" prefWidth="800.0">
+      <TableView fx:id="table" layoutY="113.0" prefHeight="488.0" prefWidth="800.0">
         <columns>
           <TableColumn prefWidth="75.0" text="桌号" />
           <TableColumn prefWidth="75.0" text="菜品编号" />
@@ -32,5 +26,9 @@
             <TableColumn prefWidth="199.0" text="食材" />
         </columns>
       </TableView>
+      <Button fx:id="btn_showall" layoutX="519.0" layoutY="47.0" mnemonicParsing="false" onAction="#showall" text="查看全部" />
+      <Button fx:id="btn_search" layoutX="605.0" layoutY="47.0" mnemonicParsing="false" onAction="#search_info" text="搜索" />
+      <Button fx:id="btn_add" layoutX="666.0" layoutY="47.0" mnemonicParsing="false" onAction="#add_info" text="点菜" />
+      <Button fx:id="btn_delete" layoutX="726.0" layoutY="47.0" mnemonicParsing="false" onAction="#del_info" text="删除" />
    </children>
 </AnchorPane>

@@ -6,28 +6,26 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="359.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RoomAddController">
+<AnchorPane prefHeight="352.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RoomAddController">
    <children>
       <Label layoutX="37.0" layoutY="24.0" text="客房添加界面">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <Button layoutX="462.0" layoutY="288.0" mnemonicParsing="false" onAction="#on_AddCancel" text=" 取消" />
-      <Button layoutX="392.0" layoutY="288.0" mnemonicParsing="false" onAction="#on_AddConfirm" text=" 确定" />
+      <Button layoutX="396.0" layoutY="266.0" mnemonicParsing="false" onAction="#on_AddConfirm" text=" 确定" />      
+      <Button layoutX="466.0" layoutY="266.0" mnemonicParsing="false" onAction="#on_AddCancel" text=" 取消" />
 
       <Label layoutX="70.0" layoutY="63.0" text="房间号：" />
       <Label layoutX="70.0" layoutY="103.0" text="类型：" />
       <Label layoutX="70.0" layoutY="147.0" text="价格：" />
       <Label layoutX="70.0" layoutY="190.0" text="状态：" />
-      <Label layoutX="70.0" layoutY="229.0" text="预定编号：" />
-      <Label layoutX="70.0" layoutY="265.0" text="服务：" />
+      <Label layoutX="70.0" layoutY="230.0" text="服务：" />
      
       <TextField fx:id="txt_id" layoutX="186.0" layoutY="58.0" prefHeight="17.0" prefWidth="166.0" />
       <TextField fx:id="txt_type" layoutX="186.0" layoutY="98.0" prefHeight="17.0" prefWidth="166.0" />
       <TextField fx:id="txt_price" layoutX="186.0" layoutY="142.0" prefHeight="17.0" prefWidth="166.0" />     
       <TextField fx:id="txt_status" layoutX="186.0" layoutY="185.0" prefHeight="17.0" prefWidth="166.0" />
-      <TextField fx:id="txt_orderId" layoutX="187.0" layoutY="225.0" prefHeight="17.0" prefWidth="166.0" />
-      <TextField fx:id="txt_service" layoutX="187.0" layoutY="261.0" prefHeight="17.0" prefWidth="166.0" />
+      <TextField fx:id="txt_service" layoutX="186.0" layoutY="225.0" prefHeight="17.0" prefWidth="166.0" />
    </children>
 </AnchorPane>
