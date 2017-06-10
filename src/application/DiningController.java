@@ -34,7 +34,7 @@ public class DiningController implements Initializable{
 	   @FXML private TableColumn<Dining,String> col_type;
 	   @FXML private TableColumn<Dining,String> col_status;
 	   @FXML private TableColumn<Dining,String> col_orderId;
-	   @FXML private TableColumn<Dining,String> col_dishId;
+	   //@FXML private TableColumn<Dining,String> col_dishId;
 	   
 	   private final static ObservableList<Dining> List = FXCollections.observableArrayList(); 
 		
@@ -47,7 +47,7 @@ public class DiningController implements Initializable{
    			   col_type.setCellValueFactory(new PropertyValueFactory<Dining,String>("type"));
    			   col_status.setCellValueFactory(new PropertyValueFactory<Dining,String>("status"));
    			   col_orderId.setCellValueFactory(new PropertyValueFactory<Dining,String>("orderId"));
-   			   col_dishId.setCellValueFactory(new PropertyValueFactory<Dining,String>("dishId"));
+   			   //col_dishId.setCellValueFactory(new PropertyValueFactory<Dining,String>("dishId"));
    			   table.setItems(List);
    		       showall();
    		   }
@@ -64,7 +64,7 @@ public class DiningController implements Initializable{
    					tmp.setType(result.getString("type"));
    					tmp.setStatus(result.getString("status"));
    					tmp.setOrderId(result.getString("orderId"));
-   					tmp.setDishId(result.getString("dishId"));
+   					//tmp.setDishId(result.getString("dishId"));
    					List.add(tmp);
    		          }
    		       }
@@ -87,7 +87,7 @@ public class DiningController implements Initializable{
 				tmp.setType(result.getString("type"));
 				tmp.setStatus(result.getString("status"));
 				tmp.setOrderId(result.getString("orderId"));
-				tmp.setDishId(result.getString("dishId"));
+				//tmp.setDishId(result.getString("dishId"));
 				List.add(tmp);
 	          }
 	       }
@@ -123,9 +123,9 @@ public class DiningController implements Initializable{
 	  public void add_dish() {
 		  try {
 			  Parent root = FXMLLoader.load(getClass()
-					  .getResource("/application/DishReserve.fxml"));
+					  .getResource("/application/Dish.fxml"));
 			  Scene scene = new Scene(root);
-			  stage_add.setTitle("");
+			  stage_add.setTitle("菜单界面");
 			  stage_add.setScene(scene);
 			  stage_add.show();
 		  } catch(Exception e) {
@@ -176,7 +176,7 @@ public class DiningController implements Initializable{
 					tmp.setType(result_info.getString("type"));	
 					tmp.setStatus(result_info.getString("status"));
 					tmp.setOrderId(result_info.getString("orderId"));
-					tmp.setDishId(result_info.getString("dishId"));
+					//tmp.setDishId(result_info.getString("dishId"));
 					List.add(tmp);
 		          }
 		       }

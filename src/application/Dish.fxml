@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DishController">
+   <children>
+      <Label layoutX="33.0" layoutY="35.0" text="菜单">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_showall" layoutX="33.0" layoutY="96.0" mnemonicParsing="false" onAction="#showall" text="显示全部" />
+      <Button fx:id="btn_reserve" layoutX="33.0" layoutY="264.0" mnemonicParsing="false" onAction="#reserve_info" text="点菜" />
+      <Button fx:id="btn_search" layoutX="33.0" layoutY="137.0" mnemonicParsing="false" onAction="#search_info" text="查找菜品" />
+      <Button fx:id="btn_add" layoutX="33.0" layoutY="181.0" mnemonicParsing="false" onAction="#add_info" text="添加菜品" />
+      <Button fx:id="btn_delete" layoutX="33.0" layoutY="225.0" mnemonicParsing="false" onAction="#del_info" text="删除菜品" />
+      <TableView fx:id="table" layoutX="154.0" layoutY="96.0" prefHeight="452.0" prefWidth="603.0">
+         <columns>
+            <TableColumn fx:id="col_id" prefWidth="76.0" text="菜品编号" />
+            <TableColumn fx:id="col_name" prefWidth="75.0" text="名称" />
+            <TableColumn fx:id="col_type" prefWidth="81.0" text="类型" />
+            <TableColumn fx:id="col_price" prefWidth="99.0" text="价格" />
+            <TableColumn fx:id="col_elementId" prefWidth="271.0" text="食材" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

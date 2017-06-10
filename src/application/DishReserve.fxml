@@ -15,15 +15,12 @@
       </Label>
       <TableView fx:id="table" layoutY="113.0" prefHeight="488.0" prefWidth="800.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="桌号" />
-          <TableColumn prefWidth="75.0" text="菜品编号" />
-            <TableColumn prefWidth="75.0" text="名称" />
-            <TableColumn prefWidth="75.0" text="类型" />
-            <TableColumn prefWidth="75.0" text="数量" />
-            <TableColumn prefWidth="75.0" text="单价" />
-            <TableColumn prefWidth="75.0" text="总价" />
-            <TableColumn prefWidth="75.0" text="状态" />
-            <TableColumn prefWidth="199.0" text="食材" />
+          <TableColumn fx:id="col_tableId" prefWidth="85.0" text="桌号" />
+          <TableColumn fx:id="col_dishId" prefWidth="97.0" text="菜品编号" />
+            <TableColumn fx:id="col_name" prefWidth="123.0" text="名称" />
+            <TableColumn fx:id="col_type" prefWidth="140.0" text="类型" />
+            <TableColumn fx:id="col_number" prefWidth="128.0" text="数量" />
+            <TableColumn fx:id="col_status" prefWidth="226.0" text="状态" />
         </columns>
       </TableView>
       <Button fx:id="btn_showall" layoutX="519.0" layoutY="47.0" mnemonicParsing="false" onAction="#showall" text="查看全部" />
