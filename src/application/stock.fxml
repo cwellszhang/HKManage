@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.stockController">
+   <children>
+      <Label prefHeight="57.0" prefWidth="179.0" text="  库存管理系统">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_showall" layoutX="22.0" layoutY="72.0" mnemonicParsing="false" onAction="#showall" prefHeight="26.0" prefWidth="96.0" text="显示全部" />      
+      <Button fx:id="btn_search" layoutX="22.0" layoutY="121.0" mnemonicParsing="false" onAction="#search_material" prefHeight="26.0" prefWidth="96.0" text="查找食材" />
+      <Button fx:id="btn_add" layoutX="22.0" layoutY="168.0" mnemonicParsing="false" onAction="#add_material" prefHeight="26.0" prefWidth="96.0" text="增加食材" />
+      <Button fx:id="btn_del" layoutX="22.0" layoutY="217.0" mnemonicParsing="false" onAction="#del_material" prefHeight="26.0" prefWidth="96.0" text="删减食材" />
+      <TableView fx:id="table" layoutX="171.0" layoutY="72.0" prefHeight="415.0" prefWidth="541.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="101.0" text="编号" visible="false" />
+          <TableColumn fx:id="col_name" prefWidth="271.0" text="名称" />
+          <TableColumn fx:id="col_type" minWidth="0.0" prefWidth="269.0" text="类型" />                    
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

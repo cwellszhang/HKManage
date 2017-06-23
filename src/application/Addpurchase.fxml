@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="234.0" prefWidth="567.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddstockController">
+   <children>
+      <Label layoutX="37.0" layoutY="24.0" text="添加进货界面">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="401.0" layoutY="189.0" mnemonicParsing="false" onAction="#on_AddConfirm" text=" 确定" />
+      <Button layoutX="465.0" layoutY="188.0" mnemonicParsing="false" onAction="#on_AddCancel" text=" 取消" />
+      
+      <Label layoutX="70.0" layoutY="63.0" text="名称：" />
+      <Label layoutX="70.0" layoutY="94.0" text="类型：" />
+      <Label layoutX="70.0" layoutY="125.0" text="需求量：" />
+      <Label layoutX="70.0" layoutY="156.0" text="单价：" />
+      
+      
+      <TextField fx:id="txt_name" layoutX="187.0" layoutY="58.0" prefHeight="17.0" prefWidth="166.0" />
+      <TextField fx:id="txt_type" layoutX="187.0" layoutY="89.0" prefHeight="17.0" prefWidth="166.0" />
+      <TextField fx:id="txt_require" layoutX="187.0" layoutY="120.0" prefHeight="17.0" prefWidth="166.0" />
+      <TextField fx:id="txt_price" layoutX="187.0" layoutY="150.0" prefHeight="17.0" prefWidth="166.0" />
+      
+   </children>
+</AnchorPane>
