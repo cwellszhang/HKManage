@@ -107,7 +107,7 @@ public class DishReserveController implements Initializable{
     public void add_info(){
     	try {
 			Parent root = FXMLLoader.load(getClass()
-					.getResource("/application/AddDishReserve.fxml"));
+					.getResource("/UIResource/AddDishReserve.fxml"));
 			Scene scene = new Scene(root);
 		    stage_add.setTitle("点菜界面");
 			stage_add.setScene(scene);

@@ -98,7 +98,7 @@ public class DishController implements Initializable{
 	  public void reserve_info(){
 		  try {
 			  Parent root = FXMLLoader.load(getClass()
-					  .getResource("/application/DishReserve.fxml"));
+					  .getResource("/UIResource/DishReserve.fxml"));
 			  Scene scene = new Scene(root);
 			  stage_add.setTitle("点菜界面");
 			  stage_add.setScene(scene);
@@ -110,7 +110,7 @@ public class DishController implements Initializable{
 	  public void add_info(){
 		  try {
 				Parent root = FXMLLoader.load(getClass()
-						.getResource("/application/AddDish.fxml"));
+						.getResource("/UIResourceUIResource/AddDish.fxml"));
 				Scene scene = new Scene(root);
 			    stage_add.setTitle("菜单管理界面");
 				stage_add.setScene(scene);

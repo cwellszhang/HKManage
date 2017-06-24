@@ -104,7 +104,7 @@ public class RoomController implements Initializable{
 		  public void reserve_info(){
 			  try {
 				  Parent root = FXMLLoader.load(getClass()
-						  .getResource("/application/RoomReserve.fxml"));
+						  .getResource("/UIResource/RoomReserve.fxml"));
 				  Scene scene = new Scene(root);
 				  stage_add.setTitle("客房预定界面");
 				  stage_add.setScene(scene);
@@ -116,7 +116,7 @@ public class RoomController implements Initializable{
 		  public void add_info(){
 			  try {
 					Parent root = FXMLLoader.load(getClass()
-							.getResource("/application/AddRoom.fxml"));
+							.getResource("/UIResource/AddRoom.fxml"));
 					Scene scene = new Scene(root);
 				    stage_add.setTitle("客房管理界面");
 					stage_add.setScene(scene);

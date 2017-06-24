@@ -150,7 +150,7 @@ public class EmployController implements Initializable{
       public void  add_info(ActionEvent event){
 		   try {
 				Parent root = FXMLLoader.load(getClass()
-						.getResource("/application/addEmployer.fxml"));
+						.getResource("/UIResource/addEmployer.fxml"));
 				Scene scene = new Scene(root);
 			    stage_add.setTitle("员工信息注册系统");
 				stage_add.setScene(scene);

@@ -108,7 +108,7 @@ public class VipController implements Initializable{
 		  public void add_info(){
 			  try {
 					Parent root = FXMLLoader.load(getClass()
-							.getResource("/application/addVip.fxml"));
+							.getResource("/UIResource/addVip.fxml"));
 					Scene scene = new Scene(root);
 				    stage_add.setTitle("贵宾信息注册系统");
 					stage_add.setScene(scene);

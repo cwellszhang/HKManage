@@ -93,7 +93,7 @@ public class stockController implements Initializable{
 		  public void add_material(){
 			  try {
 					Parent root = FXMLLoader.load(getClass()
-							.getResource("/application/Addstock.fxml"));
+							.getResource("/UIResource/Addstock.fxml"));
 					Scene scene = new Scene(root);
 				    stage_add.setTitle("库存管理界面");
 					stage_add.setScene(scene);

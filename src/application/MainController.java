@@ -92,7 +92,7 @@ public class MainController implements Initializable{
 		   try {
 			    Stage stage = new Stage();
 				Parent root = FXMLLoader.load(getClass()
-						.getResource("/application/Employer.fxml"));
+						.getResource("/UIResource/Employer.fxml"));
 				Scene scene = new Scene(root);
 			    stage.setTitle("员工管理系统");
 				stage.setScene(scene);
@@ -110,7 +110,7 @@ public class MainController implements Initializable{
 		   try {
 			    Stage stage = new Stage();
 				Parent root = FXMLLoader.load(getClass()
-						.getResource("/application/Vip.fxml"));
+						.getResource("/UIResource/Vip.fxml"));
 				Scene scene = new Scene(root);
 			    stage.setTitle("贵宾管理系统");
 				stage.setScene(scene);
@@ -129,7 +129,7 @@ public class MainController implements Initializable{
 		   try {
 			    Stage stage = new Stage();
 				Parent root = FXMLLoader.load(getClass()
-						.getResource("/application/Park.fxml"));
+						.getResource("/UIResource/Park.fxml"));
 				Scene scene = new Scene(root);
 			    stage.setTitle("车库管理系统");
 				stage.setScene(scene);
@@ -148,7 +148,7 @@ public class MainController implements Initializable{
 		   try {
 			    Stage stage = new Stage();
 				Parent root = FXMLLoader.load(getClass()
-						.getResource("/application/Entertainment.fxml"));
+						.getResource("/UIResource/Entertainment.fxml"));
 				Scene scene = new Scene(root);
 			    stage.setTitle("娱乐订单系统");
 				stage.setScene(scene);
@@ -167,7 +167,7 @@ public class MainController implements Initializable{
 		   try {
 			    Stage stage = new Stage();
 				Parent root = FXMLLoader.load(getClass()
-						.getResource("/application/Room.fxml"));
+						.getResource("/UIResource/Room.fxml"));
 				Scene scene = new Scene(root);
 			    stage.setTitle("客房管理系统");
 				stage.setScene(scene);
@@ -186,7 +186,7 @@ public class MainController implements Initializable{
 		   try {
 			    Stage stage = new Stage();
 				Parent root = FXMLLoader.load(getClass()
-						.getResource("/application/Dining.fxml"));
+						.getResource("/UIResource/Dining.fxml"));
 				Scene scene = new Scene(root);
 			    stage.setTitle("餐饮管理系统");
 				stage.setScene(scene);
@@ -205,7 +205,7 @@ public class MainController implements Initializable{
 		   try {
 			    Stage stage = new Stage();
 				Parent root = FXMLLoader.load(getClass()
-						.getResource("/application/stock.fxml"));
+						.getResource("/UIResource/stock.fxml"));
 				Scene scene = new Scene(root);
 			    stage.setTitle("库存管理系统");
 				stage.setScene(scene);
@@ -223,9 +223,27 @@ public class MainController implements Initializable{
 		   try {
 			    Stage stage = new Stage();
 				Parent root = FXMLLoader.load(getClass()
-						.getResource("/application/purchase.fxml"));
+						.getResource("/UIResource/purchase.fxml"));
 				Scene scene = new Scene(root);
 			    stage.setTitle("进货管理系统");
+				stage.setScene(scene);
+				stage.show();
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+		   }else{
+			   f_alert_confirmDialog("权限警告","对不起，您无权查看该信息");
+		   }
+		   
+	   }
+	   public void start_finance(ActionEvent event){
+		   if(check_priority()){
+		   try {
+			    Stage stage = new Stage();
+				Parent root = FXMLLoader.load(getClass()
+						.getResource("/UIResource/Fiance.fxml"));
+				Scene scene = new Scene(root);
+			    stage.setTitle("财务分析系统");
 				stage.setScene(scene);
 				stage.show();
 			} catch(Exception e) {

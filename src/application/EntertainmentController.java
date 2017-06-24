@@ -241,7 +241,7 @@ public class EntertainmentController implements Initializable {
 	   public void add_order(){
 		   try {
 				Parent root = FXMLLoader.load(getClass()
-						.getResource("/application/AddEntertainment.fxml"));
+						.getResource("/UIResource/AddEntertainment.fxml"));
 				Scene scene = new Scene(root);
 			    stage_add.setTitle("娱乐订单预定");
 				stage_add.setScene(scene);

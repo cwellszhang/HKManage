@@ -101,7 +101,7 @@ public class purchaseController implements Initializable{
 		  public void add_material(){
 			  try {
 					Parent root = FXMLLoader.load(getClass()
-							.getResource("/application/Addpurchase.fxml"));
+							.getResource("/UIResource/Addpurchase.fxml"));
 					Scene scene = new Scene(root);
 				    stage_add.setTitle("进货管理界面");
 					stage_add.setScene(scene);

@@ -128,7 +128,7 @@ public class TableReserveController implements Initializable{
     public void add_info(){
     	try {
 			Parent root = FXMLLoader.load(getClass()
-					.getResource("/application/AddDiningReserve.fxml"));
+					.getResource("/UIResource/AddDiningReserve.fxml"));
 			Scene scene = new Scene(root);
 		    stage_add.setTitle("餐桌预定界面");
 			stage_add.setScene(scene);

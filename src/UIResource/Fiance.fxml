@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FianceController">
+   <children>
+      <PieChart layoutX="138.0" layoutY="102.0" prefHeight="415.0" prefWidth="468.0" />
+      <Label layoutX="30.0" layoutY="35.0" text=" 财务分析">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="30.0" layoutY="117.0" mnemonicParsing="false" text="员工收入" />
+      <Button layoutX="30.0" layoutY="166.0" mnemonicParsing="false" text="酒店支出" />
+      <Button layoutX="30.0" layoutY="220.0" mnemonicParsing="false" text="酒店收入" />
+      <Button layoutX="30.0" layoutY="273.0" mnemonicParsing="false" text="季度报表" />
+   </children>
+</AnchorPane>

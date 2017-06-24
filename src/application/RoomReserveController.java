@@ -133,7 +133,7 @@ public class RoomReserveController  implements Initializable{
     public void add_info(){
     	try {
 			Parent root = FXMLLoader.load(getClass()
-					.getResource("/application/AddRoomReserve.fxml"));
+					.getResource("/UIResource/AddRoomReserve.fxml"));
 			Scene scene = new Scene(root);
 		    stage_add.setTitle("客房预定添加界面");
 			stage_add.setScene(scene);
