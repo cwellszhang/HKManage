@@ -42,6 +42,13 @@ public class MainController implements Initializable{
 	       String query= "select * from employee_info where id="+LoginPage.id;
 	       ResultSet result = connector.query(query);
 	       try {
+//	    	   if(result.equals(null)){
+//	    		   txt_id.setText("no account");
+//	    		   txt_name.setText("请登陆");
+//	    		   txt_gender.setText("");
+//	    		   txt_department.setText("");
+//	    		   txt_department.setText("");
+//	    	   }else{
 	         while (result.next()) {
 				System.out.println(result.getString("account"));
 			     txt_id.setText(result.getString("id"));
@@ -57,6 +64,10 @@ public class MainController implements Initializable{
 			     txt_department.setText(result.getString("departmentId"));
 			     txt_priority.setText(result.getString("priority"));
 	          }
+//	    	   }
+	         
+	         
+	         
 	       }
 			  catch (SQLException e) {
 				// TODO Auto-generated catch block
@@ -252,6 +263,11 @@ public class MainController implements Initializable{
 		   }else{
 			   f_alert_confirmDialog("权限警告","对不起，您无权查看该信息");
 		   }
+		   
+	   }
+	   private void onlogout(ActionEvent event){
+	   }
+	   private void on_modPass(ActionEvent event){
 		   
 	   }
 	   /**

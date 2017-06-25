@@ -24,7 +24,7 @@
             <Label layoutX="21.0" layoutY="274.0" text="职务：" />
             <Label layoutX="21.0" layoutY="304.0" text="权限：" />
             <Label layoutX="14.0" layoutY="17.0" text="个人信息" />
-            <Button layoutX="25.0" layoutY="335.0" mnemonicParsing="false" text="注销" />
+            <Button fx:id="btn_logout" layoutX="25.0" layoutY="335.0" mnemonicParsing="false" text="注销" />
             <Button layoutX="92.0" layoutY="335.0" mnemonicParsing="false" text="修改密码" />
             <Text fx:id="txt_name" layoutX="69.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="79.21875" />
             <Text fx:id="txt_id" layoutX="69.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="79.21875" />

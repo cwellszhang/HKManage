@@ -15,9 +15,18 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Button layoutX="30.0" layoutY="117.0" mnemonicParsing="false" text="员工收入" />
-      <Button layoutX="30.0" layoutY="166.0" mnemonicParsing="false" text="酒店支出" />
-      <Button layoutX="30.0" layoutY="220.0" mnemonicParsing="false" text="酒店收入" />
-      <Button layoutX="30.0" layoutY="273.0" mnemonicParsing="false" text="季度报表" />
+      <Button fx:id="btn_salary" layoutX="30.0" layoutY="117.0" mnemonicParsing="false" onAction="#show_salary" text="员工收入" />
+      <Button fx:id="btn_output" layoutX="30.0" layoutY="166.0" mnemonicParsing="false" onAction="#show_output" text="酒店支出" />
+      <Button fx:id="btn_income" layoutX="30.0" layoutY="220.0" mnemonicParsing="false" onAction="#show_income" text="酒店收入" />
+      <Button fx:id="btn_season" layoutX="30.0" layoutY="273.0" mnemonicParsing="false" onAction="#show_season" text="季度报表" />
+      <PieChart fx:id="chart" layoutX="174.0" layoutY="92.0" prefHeight="469.0" prefWidth="593.0" />
+      <LineChart fx:id="linechart" layoutX="165.0" layoutY="70.0" prefHeight="506.0" prefWidth="605.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
    </children>
 </AnchorPane>
